@@ -1,0 +1,13 @@
+{
+    "LinkedIn":"/Icons/In-Blue-72.png",
+    "Contact": "/Icons/envelope-at-fill.svg",
+    "Github": "/Icons/github-mark-white.png",
+    "Unreal": "/Icons/UE_Light.svg",
+    "UnrealDark": "/Icons/UE_Dark.svg",
+    "Unity": "/Icons/UnityLight.svg",
+    "UnityDark": "/Icons/UnityDark.svg",
+    "C#": "/Icons/CSharpLogo.png",
+    "TypeScript": "/Icons/ts-logo.svg",
+    "JavaScript": "/Icons/JavaScript.svg",
+    "Python": "/Icons/python.svg"
+}

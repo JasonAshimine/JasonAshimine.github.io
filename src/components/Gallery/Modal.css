@@ -1,0 +1,13 @@
+.modal.show{
+    display: block;
+}
+
+.modal-backdrop.show{
+    display: block;
+}
+
+.modal .btn-close{
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+}

@@ -1,0 +1,104 @@
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+
+
+.avatar{
+  width: 50px;
+  text-align: center;
+  line-height: 1em;
+  margin: 4px;
+}
+.avatar img{
+  width: 50px;
+  height: 50px;
+}
+
+.banner{
+  background-color: #55595c;
+}
+
+.skill-title{
+  min-width: 150px;
+}
+
+.link-icon{
+  width: 50px;
+  height: 50px;
+  margin: 4px;
+}
+
+.pointer-link { 
+  cursor: pointer; 
+} 
+
+.tool-overlay{
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+
+.title-overlay {
+  position: absolute;
+  top:10px;
+  left: 10px;
+}
+
+.desc-overlay{
+  display: none;
+}
+
+.project-card:hover .project-card-main{
+  opacity: 0.3;
+}
+
+.project-card:hover .desc-overlay{
+  position: absolute;
+  bottom:10px;
+  left: 10px;
+  display: unset;
+  cursor: pointer; 
+}
+
+
+
+.tool-overlay img{
+  width: 50px;
+  height: 50px;
+}
+
+a {
+  cursor: pointer;
+}
+a.link, a.link > * { 
+  color: inherit; 
+  text-decoration-line: inherit;
+} 
+a.link:hover, a.link:hover > * {
+  font-weight: bold;
+}
+
+
+
+
+.project-galary img{
+  max-width: 500px;
+  max-height: 500px;
+}
+
+
+
+.label{
+  font-weight: 500;
+  padding: 0 2px 0 2px;
+}
+.text{
+  padding: 0 2px 0 2px;
+}
+.divider::before{
+  content: " | ";
+  padding: 0 2px 0 2px;
+}
