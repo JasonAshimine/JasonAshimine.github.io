@@ -70,14 +70,14 @@ body {
   height: 50px;
 }
 
-a {
+a, .link {
   cursor: pointer;
 }
-a.link, a.link > * { 
+.link, .link > * { 
   color: inherit; 
   text-decoration-line: inherit;
 } 
-a.link:hover, a.link:hover > * {
+.link:hover, .link:hover > * {
   font-weight: bold;
 }
 

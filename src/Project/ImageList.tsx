@@ -4,5 +4,6 @@ interface glob{
 const FULL_IMG_LIST:glob = import.meta.glob(`./**/*.{png,jpg,jpeg,PNG,JPEG}`, { import: 'default', eager: true, query:"url"});
 
 export function getImages(key:string){
-    return Object.values(FULL_IMG_LIST).filter((dir) => dir.includes(`/Project/${key}/`));
+    console.log(FULL_IMG_LIST);
+    return Object.entries(FULL_IMG_LIST).filter(([base]) => base.includes(`/${key}/`)).map(([,dir]) => dir);
 } 
