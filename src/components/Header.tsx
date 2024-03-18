@@ -10,7 +10,7 @@ interface HeaderProps{
 export default function Header({links}: HeaderProps){
 
     return (
-    <div className="row row-cols-1 row-cols-md-2 rounded m-0 mb-3">
+    <div className="row rounded m-0 mb-3">
         <div className='col'>
             <NavButton className="link" type={navType.Main}>
                 <h1 className="title">
