@@ -12,7 +12,8 @@ const data = {
     date:"2024",
     job:"Lead Programmer",
     used: ["Unreal"],
-    description: "Description"
+    description: "Description",
+    links:[]
 }
 
 const images = GetImages(data.id);
