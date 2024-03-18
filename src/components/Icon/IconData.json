@@ -9,5 +9,7 @@
     "C#": "/Icons/CSharpLogo.png",
     "TypeScript": "/Icons/ts-logo.svg",
     "JavaScript": "/Icons/JavaScript.svg",
-    "Python": "/Icons/python.svg"
+    "Python": "/Icons/python.svg",
+    "Django":"/Icons/Django.svg",
+    "SQL":"/Icons/SQL.svg"
 }

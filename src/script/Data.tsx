@@ -30,9 +30,10 @@ const REDUCER_DATA = {
 type ReducerKey = keyof typeof REDUCER_DATA;
 
 export const ReducerMain = (state:state, action:action) : state => {
-	console.log(...Object.values(action), window.history.state, window.history.length);
-	if(action.type in REDUCER_DATA)
+	console.log(...Object.values(action))
+	if(action.type in REDUCER_DATA){
 		return REDUCER_DATA[action.type](state, action);
+	}
 
 	return state;
 }

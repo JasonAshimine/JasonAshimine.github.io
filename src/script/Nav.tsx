@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { state, action } from "./Data";
 
 export enum navType {
@@ -24,4 +25,10 @@ export const Nav_Reducers = {
   }),
 };
 
+export function Goto(nav:Nav):action{
+  return {
+    type:"Goto",
+    nav
+  }
+}
 
