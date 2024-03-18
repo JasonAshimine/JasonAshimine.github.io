@@ -6,9 +6,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: './',
-  build: {
-    outDir: './deploy'
-  },
   resolve: {
     alias: {
       "@assets": path.resolve(__dirname, "src/assets"),
