@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Nav } from "./Nav";
 import { Nav_Reducers } from "./Nav";
 import { nav } from "./Nav";
@@ -19,7 +20,7 @@ export interface action{
 
 export const initialState: state = {
     modal,
-		nav
+	nav
 }
 
 const REDUCER_DATA = {
@@ -30,9 +31,10 @@ const REDUCER_DATA = {
 type ReducerKey = keyof typeof REDUCER_DATA;
 
 export const ReducerMain = (state:state, action:action) : state => {
-	console.log(...Object.values(action), window.history.state, window.history.length);
-	if(action.type in REDUCER_DATA)
+	console.log(...Object.values(action))
+	if(action.type in REDUCER_DATA){
 		return REDUCER_DATA[action.type](state, action);
+	}
 
 	return state;
 }

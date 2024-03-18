@@ -16,7 +16,7 @@ export default function MainPage({Projects, Proficient, Familiar} : MainProps){
 
     return (
         <>
-            <div className="row banner row-cols-1 row-cols-md-2 rounded m-0">
+            <div className="row banner row-cols-1 row-cols-lg-2 rounded m-0">
                 <div className='col'>
                 <SkillList {...Proficient} />
                 </div> 
