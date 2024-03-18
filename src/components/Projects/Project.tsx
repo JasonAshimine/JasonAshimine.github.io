@@ -24,6 +24,7 @@ Learned Skills
 Images galary
 */
 
+
 export interface ProjectProps extends Props{
     title:string,
     used: string[],
@@ -31,6 +32,7 @@ export interface ProjectProps extends Props{
     job: string,
     description: string,
     images: string[],
+    links:string[],
     id:string
 }
 

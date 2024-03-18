@@ -11,24 +11,39 @@ export interface ProjectIconProps extends Props{
   alt?:string,
   id:string,
   tools:IconType[],
+  logo?:string,
   overlay:string,
 }
 
 
+function ProjectLogoOverlay({src, title}:{src?:string, title:string}){
+  if(src){
+    return (<img className="overlay-logo" src={src} alt={title}/>)
+  }
+
+  if(src == "")
+    return;
+
+  return (
+  <div className="title-overlay">
+    <div className="card-text">{title}</div>
+  </div>) 
+}
+
+
+
 function ProjectIcon(props:ProjectIconProps) {
-  const {src, title, tools, id, alt,overlay} = props;
+  const {src, title, tools, id, alt,overlay, logo} = props;
 
   return (
     <>
       <NavButton className="project-card shadow-sm" type={navType.Project} data={id}>
         <div className="project-card-main ">
-          <img className="card-img-top rounded img-fluid" src={src} alt={alt ?? id}></img>
+          <img className="project-bg rounded img-fluid" src={src} alt={alt ?? id}></img>
           <div className='tool-overlay'>
             {tools.map((type, key) => <Icon key={key} type={type}/>)}
           </div>
-          <div className="title-overlay">
-            <div className="card-text">{title}</div>
-          </div>
+          <ProjectLogoOverlay src={logo} title={title ?? id} />
         </div>
         
         <div className="desc-overlay">

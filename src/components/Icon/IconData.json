@@ -6,10 +6,15 @@
     "UnrealDark": "/Icons/UE_Dark.svg",
     "Unity": "/Icons/UnityLight.svg",
     "UnityDark": "/Icons/UnityDark.svg",
-    "C#": "/Icons/CSharpLogo.png",
+    "C#": "/Icons/c-sharp.svg",
     "TypeScript": "/Icons/ts-logo.svg",
-    "JavaScript": "/Icons/JavaScript.svg",
+    "JavaScript-Square": "/Icons/JavaScript.svg",
     "Python": "/Icons/python.svg",
-    "Django":"/Icons/Django.svg",
-    "SQL":"/Icons/SQL.svg"
+    "Django":"/Icons/django.svg",
+    "SQL":"/Icons/sql.svg",
+    "CSS":"/Icons/CSS3.svg",
+    "HTML":"/Icons/HTML5.svg",
+    "JavaScript": "/Icons/Javascript-shield.svg",
+    "Java":"/Icons/Java.svg",
+    "C++":"Icons/C++.svg"
 }

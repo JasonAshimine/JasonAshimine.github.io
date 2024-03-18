@@ -14,6 +14,7 @@ import { StateContext } from './components/ContextProvider';
 import { LINKS } from './Project/HeaderData';
 import { PROJECT, MAINPAGE_PROPS } from './Project/HeaderData';
 import { CloseModal } from './script/Modal';
+import CopyRight from './components/CopyRight';
 
 
 function GetProjectData(nav:Nav) : React.ReactElement{
@@ -60,6 +61,7 @@ function App() {
         <Header links={LINKS} />
         {NavDecider(state.nav)}
       </div>
+      <CopyRight/>
     </>
   )
 }

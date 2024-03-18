@@ -27,38 +27,55 @@ const Proficient: SkillListData = {
 
 const Familiar: SkillListData = {
   title: "Familiar",
-  list: [{
-    type: "Github"
-  }]
+  list: [{ type: "Django"}, {type:"Python"}, {type:"C++"}, {type:"SQL"}]
 };
 
 
-// HS Card Search
+/*
+https://github.com/JasonAshimine/Hearthstone-Search
 
-// Capstone project
-// Web TD
+https://jyama.itch.io/color-maze
+https://github.com/JasonAshimine/Color-Maze
+
+https://sam325.itch.io/keito-game
+https://github.com/Team-Keito/Keito-Yarn-Game
+
+https://jyama.itch.io/nocturne-manor
+https://github.com/Danirosestudio/NocturneManor
+
+https://jyama.itch.io/simple-plane
+https://github.com/JasonAshimine/Simple-Plane
+
+https://github.com/JasonAshimine/Unnamed-Auto-Battler
+
+https://github.com/JasonAshimine/Web-TD
+https://jasonashimine.github.io/Web-TD/
+*/
 
 const Projects:ProjectIconProps[] = [{
   id:"Nocturne",
   src:"Nocturne.png",
+  logo:"NocturneLogo.png",
   title:"Nocturne Game",
   overlay: "Nocturne Overlay text",
-  tools:["Unreal","UnrealDark"],
+  tools:["Unreal"],
 },{
   id:"Keito",
   title:"Keito",
   src:"uJXXSQ.png",
+  logo:"KeitoLogo.png",
   overlay: "Nocturne Overlay text",
   tools:["C#", "Unity"],
 },{
   id:"WebTD",
   src:"WebTD.png",
   title:"WebTD",
+  logo:"WebTDLogo.png",
   overlay: "Overlay text",
-  tools:["TypeScript", "JavaScript"],
+  tools:["TypeScript", "CSS"],
 },{
   id:"Capstone",
-  src:"SimplePlane.png",
+  src:"UnammedAutobattler.png",
   title:"Unamed Auto Battler",
   overlay: "Overlay text",
   tools:["Python", "Django", "SQL"],
@@ -66,18 +83,18 @@ const Projects:ProjectIconProps[] = [{
 {
   id:"SimplePlane",
   src:"SimplePlane.png",
+  logo:"",
   title:"Simple Plane",
   overlay: "Overlay text",
   tools:["C#", "Unity"],
 },{
   id:"ColorMaze",
   src:"ColorMazeDev.png",
+  logo:"ColorMazeLogo.png",
   title:"Color Maze",
   overlay: "Overlay text",
   tools:["C#", "Unity"],
-}
-
-];
+}];
 
 type ProjectDB = Record<string, ProjectProps>;
 
@@ -89,6 +106,7 @@ export const PROJECT: ProjectDB = {
     date: "2024",
     job: "Lead Programmer",
     description: "Description",
+    links:[],
     images: GetImages("Nocturne")
   },
   Keito: {
@@ -97,6 +115,7 @@ export const PROJECT: ProjectDB = {
     used: ["Unity"],
     date: "2024",
     job: "Programmer",
+    links:["https://sam325.itch.io/keito-game", "https://github.com/Team-Keito/Keito-Yarn-Game"],
     description: "Keito Description",
     images: GetImages("Keito")
   }

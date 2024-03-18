@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Nav } from "./Nav";
 import { Nav_Reducers } from "./Nav";
 import { nav } from "./Nav";
@@ -19,7 +20,7 @@ export interface action{
 
 export const initialState: state = {
     modal,
-		nav
+	nav
 }
 
 const REDUCER_DATA = {
