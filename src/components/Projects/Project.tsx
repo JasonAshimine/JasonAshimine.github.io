@@ -89,9 +89,9 @@ export default function Project(props: ProjectProps){
             
             <div className="project-desc">
                 <div className="project-desc-subheader d-flex justify-content-center">
-                    <div className="label">Job:</div><div className="text">{job}</div>
-                    <div className="divider"></div> 
-                    <div className="label">Used: </div><div className="text">{used.join()}</div>
+                    <span className="text">{job}</span>
+                    <span className="divider"></span> 
+                    <span className="text">{used.join()}</span>
                 </div>
                 <div className="project-desc-body">
                     {description}
