@@ -21,7 +21,7 @@ function GetProjectData(nav:Nav) : React.ReactElement{
   if(nav.data == undefined || !(nav.data in PROJECT))
     return <NotFound404 />;
   
-  return (<Project {...(PROJECT[nav.data] || {})}><p>Cool Stuff here hopefully</p></Project>)
+  return (<Project {...(PROJECT[nav.data] || {})} />)
 }
 
 

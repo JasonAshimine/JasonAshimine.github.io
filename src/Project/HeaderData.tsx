@@ -4,6 +4,9 @@ import { ProjectProps } from '../components/Projects/Project';
 import { ProjectIconProps } from '../components/Projects/projectIcon';
 import { SkillListData } from "../components/Skills/SkillList";
 import { GetImages } from "./ImageList";
+import SimplePlaneData from "./SimplePlane/Data";
+import ColorMazeData from "./ColorMaze/Data";
+import WebTDData from "./WebTD/Data";
 
 export const LINKS: LinkIconData[] = [
   {
@@ -29,28 +32,6 @@ const Familiar: SkillListData = {
   title: "Familiar",
   list: [{ type: "Django"}, {type:"Python"}, {type:"C++"}, {type:"SQL"}]
 };
-
-
-/*
-https://github.com/JasonAshimine/Hearthstone-Search
-
-https://jyama.itch.io/color-maze
-https://github.com/JasonAshimine/Color-Maze
-
-https://sam325.itch.io/keito-game
-https://github.com/Team-Keito/Keito-Yarn-Game
-
-https://jyama.itch.io/nocturne-manor
-https://github.com/Danirosestudio/NocturneManor
-
-https://jyama.itch.io/simple-plane
-https://github.com/JasonAshimine/Simple-Plane
-
-https://github.com/JasonAshimine/Unnamed-Auto-Battler
-
-https://github.com/JasonAshimine/Web-TD
-https://jasonashimine.github.io/Web-TD/
-*/
 
 const Projects:ProjectIconProps[] = [{
   id:"Nocturne",
@@ -96,7 +77,7 @@ const Projects:ProjectIconProps[] = [{
   tools:["C#", "Unity"],
 }];
 
-type ProjectDB = Record<string, ProjectProps>;
+export type ProjectDB = Record<string, ProjectProps>;
 
 export const PROJECT: ProjectDB = {
   Nocturne: {
@@ -106,7 +87,7 @@ export const PROJECT: ProjectDB = {
     date: "2024",
     job: "Lead Programmer",
     description: "Description",
-    links:[],
+    links:["https://jyama.itch.io/nocturne-manor", "https://github.com/Danirosestudio/NocturneManor"],
     images: GetImages("Nocturne")
   },
   Keito: {
@@ -118,8 +99,23 @@ export const PROJECT: ProjectDB = {
     links:["https://sam325.itch.io/keito-game", "https://github.com/Team-Keito/Keito-Yarn-Game"],
     description: "Keito Description",
     images: GetImages("Keito")
-  }
+  },
+  WebTD:WebTDData,
+  Capstone:{
+    id:"Capstone",
+    title:"Unamed Auto Battler",
+    used: ["Python", "Django", "HTML"],
+    date: "Nov 2023",
+    links:["https://github.com/JasonAshimine/Unnamed-Auto-Battler"],
+    job:"Programmer/Game Designer/All",
+    description:"",
+    images:GetImages("Capstone"),
+  },
+  SimplePlane:SimplePlaneData,
+  ColorMaze:ColorMazeData,
 };
+
+
 
 
 export const MAINPAGE_PROPS = {

@@ -13,11 +13,11 @@ export default function Header({links}: HeaderProps){
     <div className="row rounded m-0 mb-3">
         <div className='col'>
             <NavButton className="link" type={navType.Main}>
-                <h1 className="title">
+                <h1 className="Name">
                     Jason Ashimine
                 </h1>
-                <h3 className="sub-title">
-                    Software Engineer
+                <h3 className="Career">
+                    Software Developer
                 </h3>
             </NavButton>
         </div>

@@ -1,0 +1,7 @@
+.skill-container li .title:not(:empty)::after{
+    content: ": ";
+}
+
+.skill-container li *{
+    display: inline;
+}

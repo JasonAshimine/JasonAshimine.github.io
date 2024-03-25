@@ -62,3 +62,8 @@ a, .link {
   content: " | ";
   padding: 0 2px 0 2px;
 }
+
+
+.title{
+  font-weight: bold;
+}
