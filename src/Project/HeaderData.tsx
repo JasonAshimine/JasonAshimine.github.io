@@ -3,10 +3,10 @@ import { LinkIconData } from "../components/Links";
 import { ProjectProps } from '../components/Projects/Project';
 import { ProjectIconProps } from '../components/Projects/projectIcon';
 import { SkillListData } from "../components/Skills/SkillList";
-import { GetImages } from "./ImageList";
-import SimplePlaneData from "./SimplePlane/Data";
-import ColorMazeData from "./ColorMaze/Data";
-import WebTDData from "./WebTD/Data";
+// import { GetImages } from "./ImageList";
+// import SimplePlaneData from "./SimplePlane/Data";
+// import ColorMazeData from "./ColorMaze/Data";
+// import WebTDData from "./WebTD/Data";
 
 export const LINKS: LinkIconData[] = [
   {
