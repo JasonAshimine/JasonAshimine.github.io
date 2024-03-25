@@ -79,41 +79,49 @@ const Projects:ProjectIconProps[] = [{
 
 export type ProjectDB = Record<string, ProjectProps>;
 
-export const PROJECT: ProjectDB = {
-  Nocturne: {
-    id: "Nocturne",
-    title: "Nocturne",
-    used: ["Unreal"],
-    date: "2024",
-    job: "Lead Programmer",
-    description: "Description",
-    links:["https://jyama.itch.io/nocturne-manor", "https://github.com/Danirosestudio/NocturneManor"],
-    images: GetImages("Nocturne")
-  },
-  Keito: {
-    id: "Keito",
-    title: "Keito",
-    used: ["Unity"],
-    date: "2024",
-    job: "Programmer",
-    links:["https://sam325.itch.io/keito-game", "https://github.com/Team-Keito/Keito-Yarn-Game"],
-    description: "Keito Description",
-    images: GetImages("Keito")
-  },
-  WebTD:WebTDData,
-  Capstone:{
-    id:"Capstone",
-    title:"Unamed Auto Battler",
-    used: ["Python", "Django", "HTML"],
-    date: "Nov 2023",
-    links:["https://github.com/JasonAshimine/Unnamed-Auto-Battler"],
-    job:"Programmer/Game Designer/All",
-    description:"",
-    images:GetImages("Capstone"),
-  },
-  SimplePlane:SimplePlaneData,
-  ColorMaze:ColorMazeData,
-};
+const DATA = import.meta.glob<true, string, ProjectProps>("./**/Data.tsx",{eager:true, import: "default"});
+
+
+export const PROJECT: ProjectDB =  Object.fromEntries(Object.entries(DATA).map(([key, val]) => [ key.split('/')[1], val]));
+
+console.log(PROJECT);
+
+
+// export const PROJECT: ProjectDB = {
+//   Nocturne: {
+//     id: "Nocturne",
+//     title: "Nocturne",
+//     used: ["Unreal"],
+//     date: "2024",
+//     job: "Lead Programmer",
+//     description: "Description",
+//     links:["https://jyama.itch.io/nocturne-manor", "https://github.com/Danirosestudio/NocturneManor"],
+//     images: GetImages("Nocturne")
+//   },
+//   Keito: {
+//     id: "Keito",
+//     title: "Keito",
+//     used: ["Unity"],
+//     date: "2024",
+//     job: "Programmer",
+//     links:["https://sam325.itch.io/keito-game", "https://github.com/Team-Keito/Keito-Yarn-Game"],
+//     description: "Keito Description",
+//     images: GetImages("Keito")
+//   },
+//   WebTD:WebTDData,
+//   Capstone:{
+//     id:"Capstone",
+//     title:"Unamed Auto Battler",
+//     used: ["Python", "Django", "HTML"],
+//     date: "Nov 2023",
+//     links:["https://github.com/JasonAshimine/Unnamed-Auto-Battler"],
+//     job:"Programmer/Game Designer/All",
+//     description:"",
+//     images:GetImages("Capstone"),
+//   },
+//   SimplePlane:SimplePlaneData,
+//   ColorMaze:ColorMazeData,
+// };
 
 
 
