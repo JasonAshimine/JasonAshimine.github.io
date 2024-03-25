@@ -5,33 +5,51 @@ import { GetSkills } from "../GetSkills";
 import { GetImages } from "../ImageList";
 
 const Skill: SkillData = {
-    // Learned:[
-    //     {title:"Unity", desc:"Overall interfaces and workflow patterns"},
-    //     {title:"Singleton", desc:"Also learned better state management / persistent Scenes"},
-    //     {title:"Object pooling", desc:"Bullets are object pooled & returned to pool when offscreen / hit"},
-    //     {title:"Saving", desc:"Saved Settings and High score using PlayerPref"},
-    //     {title:"Particle system", desc:"Used to animate the background of the title screen."},
-    //     {title:"Prefabs", desc:"Prefab for core components bullets, planes, enemies, and UI components."},
-    // ],
-    // Features:[
-    //     {title:"Combat", desc:"Regenerating Health & short invulnerability after hit"},
-    //     {title:"Enemy", desc:"Scaling Enemy health & ability to split to smaller on death"},    
-    //     {title:"Menu", desc:"UI/UX Settings SFX & Music with persistant settings"},
-    //     {title:"Partical System", desc:"Animated title screen"},
-    //     {title:"Audio system", desc:"SFX & Music options"},
-    // ]
-}
+    Learned:[
+        {title:"Django", desc:"Server backend for multiplayer and API backend."},
+        {title:"SQL", desc:"Data storage, Queries, and Data relationships."},
+        {title:"Sass/CSS", desc:"Data storage, Queries, and Data relationships."},
 
-const SimplePlaneData: ProjectProps = {
-    id:"SimplePlane",
-    title:"Simple Plane",
-    used: ["Unity"],
+    ],
+    Features:[
+        {title:"Combat", desc:"Regenerating Health & short invulnerability after hit"},
+        {title:"Enemy", desc:"Scaling Enemy health & ability to split to smaller on death"},    
+        {title:"Menu", desc:"UI/UX Settings SFX & Music with persistant settings"},
+        {title:"Partical System", desc:"Animated title screen"},
+        {title:"Audio system", desc:"SFX & Music options"},
+    ]
+}
+/*
+Created a web based auto battler game.
+Animated Pixel sprites / combat with event based sequencing.
+Game loop is Drafting then Combat with Randomly generated enemies.
+Item tier system, tier leveling system and scaling tier cost.
+Randomly generated shop with scaling item rarity based on tier.
+Speed control to accelerate animations (Makes combat faster).
+Uses API interface to update clients in SPA.
+
+
+*/
+
+const description = [
+    "Fullstack - Auto Battler built to be like super pet auto battle.",
+    " Where player data is stored & re-used for future fights.",
+    "CSS animations & used async timing to sequence animations.",
+    "Item shop, Scaling tiers, Scaling monsters."
+].join(" ");
+
+const id = "Capstone";
+
+const Data: ProjectProps = {
+    id,
+    title:"Unnamed Auto Battler",
+    used: ["Python", "Django", "HTML"],
     date: "Nov 2023",
-    links:["https://github.com/JasonAshimine/Simple-Plane", <iframe frameBorder="0" src="https://itch.io/embed/2362853?dark=true" width="552" height="167"><a href="https://jyama.itch.io/simple-plane">Simple Plane by Jyama</a></iframe>],
+    links:["https://github.com/JasonAshimine/Unnamed-Auto-Battler"],
     job:"Programmer/Game Designer/All",
-    description:"An introductory Unity project completed in two days, featuring a full game loop and essential game development features. Highlights include Singleton pattern for state management, object pooling for bullets, PlayerPref for data saving, and engaging audio and particle systems. The game offers SFX, high score tracking, enemy dynamics, health regeneration, and an animated title screen.",
+    description,
     children: GetSkills(Skill),
-    images:GetImages("SimplePlane"),
+    images:GetImages(id),
 };
 
-export default SimplePlaneData;
+export default Data;

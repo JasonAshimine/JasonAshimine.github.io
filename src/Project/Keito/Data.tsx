@@ -22,16 +22,16 @@ const Skill: SkillData = {
     // ]
 }
 
-const SimplePlaneData: ProjectProps = {
-    id:"SimplePlane",
-    title:"Simple Plane",
+const Data: ProjectProps = {
+    id: "Keito",
+    title: "Keito",
     used: ["Unity"],
-    date: "Nov 2023",
-    links:["https://github.com/JasonAshimine/Simple-Plane", <iframe frameBorder="0" src="https://itch.io/embed/2362853?dark=true" width="552" height="167"><a href="https://jyama.itch.io/simple-plane">Simple Plane by Jyama</a></iframe>],
-    job:"Programmer/Game Designer/All",
-    description:"An introductory Unity project completed in two days, featuring a full game loop and essential game development features. Highlights include Singleton pattern for state management, object pooling for bullets, PlayerPref for data saving, and engaging audio and particle systems. The game offers SFX, high score tracking, enemy dynamics, health regeneration, and an animated title screen.",
-    children: GetSkills(Skill),
-    images:GetImages("SimplePlane"),
+    date: "2024",
+    job: "Programmer",
+    links:["https://sam325.itch.io/keito-game", "https://github.com/Team-Keito/Keito-Yarn-Game"],
+    description: "Keito Description",
+    children:GetSkills(Skill),
+    images: GetImages("Keito")
 };
 
-export default SimplePlaneData;
+export default Data;

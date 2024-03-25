@@ -33,7 +33,7 @@ body {
   cursor: pointer; 
 } 
 
-a, .link {
+a, .link, .pointer {
   cursor: pointer;
 }
 .link, .link > * { 
@@ -48,8 +48,6 @@ a, .link {
   max-width: 500px;
   max-height: 500px;
 }
-
-
 
 .label{
   font-weight: 500;

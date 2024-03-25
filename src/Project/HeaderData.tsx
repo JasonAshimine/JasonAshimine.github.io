@@ -79,13 +79,9 @@ const Projects:ProjectIconProps[] = [{
 
 export type ProjectDB = Record<string, ProjectProps>;
 
-const DATA = import.meta.glob<true, string, ProjectProps>("./**/Data.tsx",{eager:true, import: "default"});
-
-
-export const PROJECT: ProjectDB =  Object.fromEntries(Object.entries(DATA).map(([key, val]) => [ key.split('/')[1], val]));
-
-console.log(PROJECT);
-
+//const DATA = import.meta.glob<true, string, ProjectProps>("./**/Data.tsx",{eager:true, import: "default"});
+//export const PROJECT: ProjectDB =  Object.fromEntries(Object.entries(DATA).map(([key, val]) => [ key.split('/')[1], val]));
+export const PROJECT: ProjectProps[] = Object.values(import.meta.glob<true, string, ProjectProps>("./**/Data.tsx",{eager:true, import: "default"}));
 
 // export const PROJECT: ProjectDB = {
 //   Nocturne: {

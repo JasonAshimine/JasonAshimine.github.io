@@ -18,10 +18,12 @@ import CopyRight from './components/CopyRight';
 
 
 function GetProjectData(nav:Nav) : React.ReactElement{
-  if(nav.data == undefined || !(nav.data in PROJECT))
+  const ProjectData = PROJECT.find(data => data.id === nav.data);
+  
+  if(nav.data == undefined || !ProjectData)
     return <NotFound404 />;
   
-  return (<Project {...(PROJECT[nav.data] || {})} />)
+  return (<Project {...ProjectData} />)
 }
 
 
