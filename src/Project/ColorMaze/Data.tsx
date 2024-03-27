@@ -24,14 +24,21 @@ const Skills: SkillData = {
 const description = "Experimental Color Maze offers a unique maze navigation experience, relying solely on color cues in a minimalist design."
  + "This Unity-based game teaches through sensory reduction and escalating challenges, featuring dynamic audio and minimalistic visuals.";
 
+const links = <div>
+    <iframe frameBorder="0" src="https://itch.io/embed/2382757?linkback=true&amp;dark=true" width="552" height="167"><a href="https://jyama.itch.io/color-maze">Color Maze by Jyama</a></iframe>
+    <div className="text-center">
+        Source Code: <a href="https://github.com/JasonAshimine/Color-Maze">Github</a>
+    </div>
+</div>
+
 
 const Data: ProjectProps = {
     id:"ColorMaze",
     title:"Color Maze",
     used: ["Unity"],
     date: "Dec 2023",
-    links:["https://github.com/JasonAshimine/Color-Maze", <iframe frameBorder="0" src="https://itch.io/embed/2382757?linkback=true&amp;dark=true" width="552" height="167"><a href="https://jyama.itch.io/color-maze">Color Maze by Jyama</a></iframe>],
-    job:"Programmer/Game Designer/All",
+    links,
+    job:"Solo Developer / Programmer / Game Designer",
     description,
     images:GetImages("ColorMaze"),
     children:GetSkills(Skills)

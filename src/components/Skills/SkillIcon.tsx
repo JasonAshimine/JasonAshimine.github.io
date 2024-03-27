@@ -9,13 +9,13 @@ export interface SkillIconData{
 
 
 function SkillIcon(props: SkillIconData) {
-  const {name, type} = props;
+  const {type} = props;
 
   return (
     <>
       <div className="avatar">
-        <Icon className="" type={type} />
-        <div className="card-text">{name ?? type}</div>
+        <Icon className="" type={type}/>
+        {/* <div className="card-text">{name ?? type}</div> */}
       </div>
     </>
   )

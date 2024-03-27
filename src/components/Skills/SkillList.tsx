@@ -10,8 +10,8 @@ function SkillList(props: SkillListData) {
   
     return (
       <>
-        <div className="d-flex justify-content-middle">
-          <h4 className="skill-title p-4">
+        <div className="d-flex justify-content-middle align-items-center">
+          <h4 className="skill-title mb-0">
             {title}
           </h4>
           {list.map((data, key) => <SkillIcon {...data} key={key}/>)}

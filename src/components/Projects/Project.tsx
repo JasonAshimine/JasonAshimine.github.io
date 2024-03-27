@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import Gallery from "../Gallery/Gallery";
 import { IconType } from "../Icon/Icon";
 import { Props } from "../Types";
+import "./Project.css";
 
 /*
 project title
@@ -35,7 +36,7 @@ export interface ProjectProps extends Props{
     job: string,
     description: string,
     images: string[],
-    links:LinkType[],
+    links:LinkType[] | ReactElement,
     id:string,
 }
 
@@ -74,6 +75,13 @@ function Link({href}:{href:LinkType}){
     return <a href={href}>{href}</a>
 }
 
+function HandleLinks(links:LinkType[] | ReactElement){
+    if(Array.isArray(links))
+        return links.map((href, key) => <Link href={href} key={key} />);
+
+    return links;
+}
+
 
 
 export default function Project(props: ProjectProps){
@@ -89,9 +97,9 @@ export default function Project(props: ProjectProps){
             
             <div className="project-desc">
                 <div className="project-desc-subheader d-flex justify-content-center">
-                    <span className="text">{job}</span>
-                    <span className="divider"></span> 
-                    <span className="text">{used.join()}</span>
+                    <div className="label">Role:</div><div className="text">{job}</div>
+                    <div className="divider"></div> 
+                    <div className="label">Used: </div><div className="text">{used.join()}</div>
                 </div>
                 <div className="project-desc-body">
                     {description}
@@ -102,8 +110,8 @@ export default function Project(props: ProjectProps){
                 {children}
             </div>
 
-            <div className="project-desc-links d-flex flex-column align-items-center">
-                {links.map((href, key) => <Link href={href} key={key} />)}
+            <div className="project-desc-links d-flex justify-content-center">
+                {HandleLinks(links)}
             </div>
 
             <div className="project-galary">

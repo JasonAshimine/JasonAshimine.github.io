@@ -46,7 +46,7 @@ const Data: ProjectProps = {
     used: ["Python", "Django", "HTML"],
     date: "Nov 2023",
     links:["https://github.com/JasonAshimine/Unnamed-Auto-Battler"],
-    job:"Programmer/Game Designer/All",
+    job:"Solo Developer / Programmer / Game Designer",
     description,
     children: GetSkills(Skill),
     images:GetImages(id),

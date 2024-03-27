@@ -33,7 +33,7 @@ function ProjectLogoOverlay({src, title}:{src?:string, title:string}){
 
 
 function ProjectIcon(props:ProjectIconProps) {
-  const {src, title, tools, id, alt,overlay, logo} = props;
+  const {src, title, tools, id, alt, logo} = props;
 
   return (
     <>
@@ -47,7 +47,7 @@ function ProjectIcon(props:ProjectIconProps) {
         </div>
         
         <div className="desc-overlay">
-          {overlay}
+          <h3>{title}</h3>
         </div>
       </NavButton>
     </>
